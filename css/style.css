@@ -1,0 +1,196 @@
+/* variable declared as root for the colors as well as font stack and sizes. */
+
+:root {
+  --darkBlue: #293241;
+  --orange: #ee6b4d;
+  --paleAqua: #dffbfc;
+  --pastelBlue: #9bc0d9;
+  --steelBlue: #3d5b81;
+  --green: #005e54;
+  --yellow: #c2bb00;
+  --navy: #003547;
+  --skyblue: #008cdb;
+  --font-size: 1.3rem;
+  --primary-font: "Rufino", monospace;
+  --secondary-font: "Oxygen", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--primary-font);
+  background-color: var(--navy);
+  color: var(--paleAqua);
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--yellow);
+}
+
+a:hover {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+/* background color divs*/
+.section-contact {
+  background-color: var(--steelBlue);
+}
+
+.gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(9, 121, 105, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  height: 2px;
+}
+
+/* intro styles */
+
+#intro {
+  padding: 4rem 1rem 10rem 1 rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#intro .name {
+  font-family: var(--secondary-font);
+}
+
+.name span {
+  font-family: var(--primary-font);
+  font-size: 4rem;
+  color: var(--green);
+  display: block;
+}
+
+#intro h2 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+#contact {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+#contact p:last-child {
+  margin-top: 3rem;
+}
+
+/* navbar styles */
+nav {
+  font-family: var(--primary-font);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--secondary-font);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav [class*="fa-"] {
+  font-size: 200%;
+  color: var(--skyblue);
+}
+
+nav h1 [class*="fa-"] {
+  font-size: 100%;
+  color: var(--skyblue);
+}
+
+nav a {
+  color: var(--paleAqua);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+  color: var(--orange);
+}
+
+.button {
+  background-color: var(--orange);
+  color: var(--paleAqua);
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  font-family: var(--secondary-font);
+  text-decoration: none;
+}
+
+.button:hover {
+  color: var(--paleAqua);
+  background-color: var(--yellow);
+}
+
+footer {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 3rem;
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
