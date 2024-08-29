@@ -49,16 +49,43 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
 /* background color divs*/
 .section-contact {
   background-color: var(--steelBlue);
 }
 
-.gradient {
+.section-projects {
+  background-color: var(--pastelBlue);
+}
+
+.gradient-intro {
+  background: linear-gradient(
+    90deg,
+    rgba(153, 68, 209, 1) 0%,
+    rgba(191, 29, 29, 1) 50%,
+    rgba(210, 146, 56, 1) 100%
+  );
+  height: 3px;
+}
+
+.gradient-footer {
   background: linear-gradient(
     90deg,
     rgba(9, 121, 105, 1) 0%,
     rgba(0, 212, 255, 1) 100%
+  );
+  height: 2px;
+}
+
+.gradient-contact {
+  background: linear-gradient(
+    90deg,
+    rgba(114, 9, 121, 1) 0%,
+    rgba(255, 81, 0, 1) 100%
   );
   height: 2px;
 }
@@ -170,6 +197,7 @@ nav [class*="fa-"]:hover {
 footer {
   text-align: center;
   padding: 4rem 0;
+  background-color: var(--navy);
 }
 
 footer ul {
@@ -181,6 +209,100 @@ footer ul {
   justify-content: center;
   gap: 3rem;
   font-size: 3rem;
+}
+
+/* project styles */
+
+#projects {
+  padding: 4rem;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+  color: var(--orange);
+}
+
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  margin: 0;
+}
+
+.bluebox {
+  background-color: var(--darkBlue);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+#projects img {
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid var(--darkBlue);
+  border-top: 1px solid var(--darkBlue);
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+#projects .reverse img {
+  margin: 2rem 0 4rem 0;
+  border-left: none;
+  border-right: 1px solid var(--darkBlue);
+  border-top: 1px solid var(--darkBlue);
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+@media (min-width: 550px) {
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+  #projects {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  #projects img {
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+  .text {
+    grid-column: 5/11;
+    grid-row: 1/2;
+    order: 2;
+    text-align: right;
+  }
+  #projects ul {
+    justify-content: flex-end;
+  }
+  #projects .reverse .text {
+    grid-column: 1/7;
+    order: 2;
+    text-align: left;
+  }
+  #projects .reverse img {
+    grid-column: 6/11;
+    grid-row: 1/2;
+  }
+  #projects .reverse ul {
+    justify-content: flex-start;
+  }
 }
 
 @media (min-width: 850px) {
