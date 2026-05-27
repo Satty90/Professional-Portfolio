@@ -14,7 +14,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Mahdi Sattarnia Web Development</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <title>About | Mahdi Sattarnia — Senior Data Engineer</title>
   </head>
   <body>
     <nav>
@@ -47,7 +48,7 @@
             href="./lib/Mahdi Sattarnia-Junior Software Developer.pdf"
             target="_blank"
             class="button"
-            >CV</a
+            >Resume</a
           >
         </li>
       </ul>
@@ -55,37 +56,43 @@
     <div class="gradient-intro"></div>
     <div class="section-contact"></div>
     <section id="projects">
-      <h2>About Mahdi Sattarnia</h2>
+      <h2 data-aos="fade-up">About Mahdi Sattarnia</h2>
       <article>
-        <div class="text">
+        <div class="text" data-aos="fade-right" data-aos-delay="150">
           <h3>Just the highlights</h3>
           <p class="blackbox">
-            I grew up in north of London and currently reside in the beautiful
-            city of Newcastle-Upon-Tyne in North East of England. After many
-            years of building a sucessful career in sales I made a bold move to
-            start a career in tech. I am Persian, played professional
-            basketball, played professional poker, and I have been involved in
-            <strong>Tech</strong> for one year.
+            Based in Newcastle-upon-Tyne, I'm a data engineer with hands-on
+            experience building and maintaining data platforms on
+            <strong>Azure</strong> and <strong>Microsoft Fabric</strong>. My
+            work spans the full data lifecycle — ingesting raw data from diverse
+            sources, transforming it through ETL/ELT pipelines, and delivering
+            clean, reliable datasets to analytics and reporting teams. Before
+            moving into data engineering I built a successful career in sales,
+            which means I understand the business context behind the data I work
+            with — not just the technical implementation.
           </p>
-          <h4>My favorite technologies include:</h4>
+          <h4>Technologies I work with:</h4>
           <ul>
+            <li>Azure Data Factory</li>
+            <li>Microsoft Fabric</li>
+            <li>Azure Synapse</li>
             <li>Python</li>
-            <li>SQL</li>
-            <li>React</li>
-            <li>Next.js</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Tailwind</li>
+            <li>SQL / PySpark</li>
+            <li>Delta Lake</li>
+            <li>Power BI</li>
           </ul>
         </div>
-        <img src="./img/me-portfolio-image.jpg" alt="a picture of me Mahdi" />
+        <img
+          src="./img/me-portfolio-image.jpg"
+          alt="Mahdi Sattarnia, Senior Data Engineer"
+          data-aos="fade-left"
+          data-aos-delay="150"
+        />
       </article>
     </section>
     <div class="gradient-intro"></div>
     <footer>
-      <h2>Mahdi Sattarnia &middot; Developer</h2>
+      <h2>Mahdi Sattarnia &middot; Data Engineer</h2>
       <ul>
         <li>
           <a href="https://linkedin.com/in/mahdi-sattarnia/" target="_blank"
@@ -108,5 +115,7 @@
       </ul>
       <p><small>&copy; 2024 Mahdi Sattarnia. All rights reserved.</small></p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 700, once: true, offset: 80 });</script>
   </body>
 </html>

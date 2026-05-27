@@ -11,12 +11,13 @@
   --navy: #003547;
   --skyblue: #008cdb;
   --font-size: 1.3rem;
-  --primary-font: "Rufino", monospace;
+  --primary-font: "Rufina", monospace;
   --secondary-font: "Oxygen", sans-serif;
 }
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -315,4 +316,130 @@ footer ul {
     text-align: left;
     margin-right: auto;
   }
+}
+
+/* ---- Transitions ---- */
+nav a {
+  transition: color 0.25s ease;
+}
+
+nav [class*="fa-"] {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+nav [class*="fa-"]:hover {
+  transform: scale(1.15);
+}
+
+.button {
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(238, 107, 77, 0.35);
+}
+
+#projects img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects img:hover {
+  transform: scale(1.025) translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+footer [class*="fa-"] {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+footer [class*="fa-"]:hover {
+  color: var(--orange);
+  transform: scale(1.2);
+}
+
+/* ---- Hero entrance animation ---- */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#intro .name {
+  animation: heroFadeUp 0.7s ease both;
+  animation-delay: 0.1s;
+}
+
+#intro h2 {
+  animation: heroFadeUp 0.7s ease both;
+  animation-delay: 0.3s;
+}
+
+#intro p:first-of-type {
+  animation: heroFadeUp 0.7s ease both;
+  animation-delay: 0.5s;
+}
+
+#intro p:last-of-type {
+  animation: heroFadeUp 0.7s ease both;
+  animation-delay: 0.7s;
+}
+
+/* ---- Skills section ---- */
+#skills {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem 4rem;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 1.2rem;
+  font-family: var(--secondary-font);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pastelBlue);
+  margin-bottom: 2rem;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1.5rem 2.5rem;
+}
+
+#skills li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-family: var(--secondary-font);
+  color: var(--paleAqua);
+  transition: color 0.25s ease, transform 0.25s ease;
+  cursor: default;
+}
+
+#skills li:hover {
+  color: var(--orange);
+  transform: translateY(-4px);
+}
+
+#skills li [class*="fa-"] {
+  font-size: 2rem;
+  color: var(--skyblue);
+  transition: color 0.25s ease;
+}
+
+#skills li:hover [class*="fa-"] {
+  color: var(--orange);
 }
